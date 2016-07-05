@@ -3,7 +3,7 @@ import React from 'react'
 const Loading = () => {
   return (
     <div className='col-md-4'>
-      Loading ....
+      <span className='icon-cup'></span>Cargando…
     </div>
   )
 }

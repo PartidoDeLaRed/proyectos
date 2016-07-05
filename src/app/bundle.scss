@@ -2,7 +2,26 @@ body {
   font-size: 16px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  cursor: default;
+}
+
 .header {
   padding-left: 0;
   padding-right: 0;
+}
+
+.container-small {
+  padding-right: .9375rem;
+  padding-left: .9375rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 320px;
+  width: 100%;
 }

@@ -43,36 +43,32 @@ class UserProfile extends Component {
     }
 
     return (
-      <div className='row'>
-        <div className='col-md-6'>
-          <form id='frmProfile' role='form' onSubmit={this.onFormSubmit}>
-            {message}
-            <div className='form-group'>
-              <label htmlFor='displayName'>Name</label>
-              <input
-                type='text'
-                defaultValue={this.props.currentUser.displayName}
-                className='form-control'
-                ref='displayName'
-                id='displayName'
-                placeholder='Display name'
-                name='displayName' />
-            </div>
-            <div className='form-group'>
-              <label htmlFor='email'>Email</label>
-              <input
-                type='text'
-                defaultValue={this.props.currentUser.email}
-                className='form-control'
-                id='email'
-                ref='email'
-                placeholder='Email'
-                name='email' />
-            </div>
-            <button type='submit' className='btn btn-primary btn-block'>Update</button>
-          </form>
+      <form id='frmProfile' role='form' onSubmit={this.onFormSubmit}>
+        {message}
+        <div className='form-group'>
+          <label htmlFor='displayName'>Nombre</label>
+          <input
+            type='text'
+            defaultValue={this.props.currentUser.displayName}
+            className='form-control'
+            ref='displayName'
+            id='displayName'
+            placeholder='Nombre completo'
+            name='displayName' />
         </div>
-      </div>
+        <div className='form-group'>
+          <label htmlFor='email'>Email</label>
+          <input
+            type='text'
+            defaultValue={this.props.currentUser.email}
+            className='form-control'
+            id='email'
+            ref='email'
+            placeholder='Email'
+            name='email' />
+        </div>
+        <button type='submit' className='btn btn-primary btn-block'>Actualizar</button>
+      </form>
     )
   }
 

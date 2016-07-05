@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class ProjectsNew extends Component {
   render () {
-    return (<h1>New Project!</h1>)
+    return (<h1>Crear Proyecto!</h1>)
   }
 }
 

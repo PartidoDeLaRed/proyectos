@@ -24,13 +24,32 @@ class App extends Component {
       return (
         <ul className='nav navbar-nav pull-xs-right'>
           <li className='nav-item dropdown'>
-            <a className='nav-link dropdown-toggle' data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false'>
-              {user.displayName || user.email}
+            <a
+              className='nav-link dropdown-toggle'
+              data-toggle='dropdown'
+              href='#'
+              role='button'
+              aria-haspopup='true'
+              aria-expanded='false'>
+              <span className='icon-plus'></span>
             </a>
             <div className='dropdown-menu dropdown-menu-right'>
-              <Link className='dropdown-item' to='/settings'>Settings</Link>
+              <Link className='dropdown-item' to='/projects/new'>Crear Proyecto</Link>
+            </div>
+          </li>
+          <li className='nav-item dropdown'>
+            <a className='nav-link dropdown-toggle' data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false'>
+              <span className='icon-user'></span>
+            </a>
+            <div className='dropdown-menu dropdown-menu-right'>
+              <h6 className='dropdown-header'>{user.displayName || user.email}</h6>
               <div className='dropdown-divider'></div>
-              <Link className='dropdown-item' to='/logout' onClick={this.logOut}>Logout</Link>
+              <Link className='dropdown-item' to='/settings'>
+                Configuración
+              </Link>
+              <Link className='dropdown-item' to='/logout' onClick={this.logOut}>
+                Salir
+              </Link>
             </div>
           </li>
         </ul>
@@ -38,7 +57,11 @@ class App extends Component {
     } else {
       return (
         <div className='nav navbar-nav pull-xs-right'>
-          <Link className='nav-item nav-link' to='/login'>Login</Link>
+          <Link className='nav-item nav-link' to='/login'>
+            <span className='hint--bottom-left' aria-label='Entrar…'>
+              <span className='icon-login'></span>
+            </span>
+          </Link>
         </div>
       )
     }
@@ -49,8 +72,10 @@ class App extends Component {
       <div>
         <header className='header navbar navbar-fixed-top navbar-light bg-faded'>
           <div className='container'>
-            <Link to='/' className='navbar-brand'>Boilerplate</Link>
-            <Link to='/' className='navbar-brand'><small className='text-muted hidden-xs-down'>Firebase ~ Redux ~ React</small></Link>
+            <Link to='/' className='navbar-brand'>Proyectos</Link>
+            <Link to='/' className='navbar-brand'>
+              <small className='text-muted hidden-xs-down'>Partido de la Red</small>
+            </Link>
             {this.renderUserMenu(this.props.currentUser)}
           </div>
         </header>

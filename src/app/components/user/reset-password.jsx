@@ -36,30 +36,24 @@ class ResetPassword extends Component {
     }
 
     return (
-      <div className='container'>
-        <div className='row'>
-          <div className='col-md-4'>
-            <form role='form' onSubmit={this.onFormSubmit}>
-              {message}
-              <h2>Reset Password</h2>
-              <div className='form-group'>
-                <label htmlFor='txtEmail'>
-                  Email address
-                </label>
-                <input
-                  type='email'
-                  className='form-control'
-                  id='txtEmail'
-                  ref='email'
-                  placeholder='Enter email'
-                  name='email' />
-              </div>
-              <button type='submit' className='btn btn-primary btn-block'>
-                Reset Password
-              </button>
-            </form>
+      <div className='container-small'>
+        <form role='form' onSubmit={this.onFormSubmit}>
+          {message}
+          <h3>Recuperar Contraseña</h3>
+          <p>Pasanos tu mail y te mandamos un link para que puedas cambiar tu contraseña.</p>
+          <div className='form-group'>
+            <input
+              type='email'
+              className='form-control'
+              id='txtEmail'
+              ref='email'
+              placeholder='Acá escribí tu email…'
+              name='email' />
           </div>
-        </div>
+          <button type='submit' className='btn btn-primary btn-block'>
+            Recuperar
+          </button>
+        </form>
       </div>
     )
   }

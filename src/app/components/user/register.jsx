@@ -41,25 +41,21 @@ class UserRegister extends Component {
     }
 
     return (
-      <div className='container'>
-        <div className='row'>
-          <div className='col-md-6 col-lg-4'>
-            <form id='frmRegister' role='form' onSubmit={this.onFormSubmit}>
-              {message}
-              <h2>Register</h2>
-              <div className='form-group'>
-                <label htmlFor='txtRegEmail'>Email</label>
-                <input type='email' className='form-control' ref='email' id='txtEmail' placeholder='Enter email' name='email' />
-                <small className='text-muted'>We'll never share your email with anyone else.</small>
-              </div>
-              <div className='form-group'>
-                <label htmlFor='txtRegPass'>Password</label>
-                <input type='password' className='form-control' ref='password' id='txtPass' placeholder='Password' name='password' />
-              </div>
-              <button type='submit' className='btn btn-primary btn-block'>Register</button>
-            </form>
+      <div className='container-small'>
+        <form id='frmRegister' role='form' onSubmit={this.onFormSubmit}>
+          {message}
+          <h3><span className='icon-user-follow'>&nbsp;</span>Registro</h3>
+          <div className='form-group'>
+            <label htmlFor='txtRegEmail'>Email</label>
+            <input type='email' className='form-control' ref='email' id='txtEmail' placeholder='Email' name='email' />
+            <small className='text-muted'><b>No</b> lo vamos a compartir sin tu permiso.</small>
           </div>
-        </div>
+          <div className='form-group'>
+            <label htmlFor='txtRegPass'>Contraseña</label>
+            <input type='password' className='form-control' ref='password' id='txtPass' placeholder='Contraseña' name='password' />
+          </div>
+          <button type='submit' className='btn btn-primary btn-block'>Registrarme</button>
+        </form>
       </div>
     )
   }

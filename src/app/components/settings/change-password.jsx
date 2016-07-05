@@ -41,36 +41,32 @@ class ChangePassword extends Component {
     }
 
     return (
-      <div className='row'>
-        <div className='col-md-6'>
-          <form id='ChangePassword' role='form' onSubmit={this.onFormSubmit}>
-            {message}
-            <div className='form-group'>
-              <label htmlFor='password'>
-                New Password
-              </label>
-              <input
-                type='password'
-                className='form-control'
-                name='password'
-                ref='password'
-                id='password' />
-            </div>
-            <div className='form-group'>
-              <label htmlFor='repeatPassword'>
-                Repeat Password
-              </label>
-              <input
-                type='password'
-                className='form-control'
-                name='repeatPassword'
-                ref='repeatPassword'
-                id='repeatPassword' />
-            </div>
-            <button type='submit' className='btn btn-primary btn-block'>Change</button>
-          </form>
+      <form id='ChangePassword' role='form' onSubmit={this.onFormSubmit}>
+        {message}
+        <div className='form-group'>
+          <label htmlFor='password'>
+            Contraseña Nueva
+          </label>
+          <input
+            type='password'
+            className='form-control'
+            name='password'
+            ref='password'
+            id='password' />
         </div>
-      </div>
+        <div className='form-group'>
+          <label htmlFor='repeatPassword'>
+            Repetir Contraseña
+          </label>
+          <input
+            type='password'
+            className='form-control'
+            name='repeatPassword'
+            ref='repeatPassword'
+            id='repeatPassword' />
+        </div>
+        <button type='submit' className='btn btn-primary btn-block'>Cambiar</button>
+      </form>
     )
   }
 

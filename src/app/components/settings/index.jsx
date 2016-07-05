@@ -6,14 +6,16 @@ export default class Settings extends Component {
     return (
       <div className='container'>
         <br/>
+        <h3><span className='icon-settings'>&nbsp;</span>Configuración</h3>
+        <br/>
         <nav className='nav nav-pills'>
           <Link className='nav-item nav-link' activeClassName='active' to='/settings/profile'>
-            <span className='octicon octicon-person'>&nbsp;</span>
-            Profile
+            <span className='icon-user'>&nbsp;</span>
+            Perfil
           </Link>
           <Link className='nav-item nav-link' activeClassName='active' to='/settings/change-password'>
-            <span className='octicon octicon-key'>&nbsp;</span>
-            Change Password
+            <span className='icon-key'>&nbsp;</span>
+            Cambiar Contraseña
           </Link>
         </nav>
         {this.props.children}
