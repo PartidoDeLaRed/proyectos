@@ -86,6 +86,10 @@ class App extends Component {
   }
 }
 
+App.propTypes = {
+  fetchUser: React.PropTypes.number
+}
+
 function mapDispatchToProps (dispatch) {
   return bindActionCreators({fetchUser, logoutUser}, dispatch)
 }
