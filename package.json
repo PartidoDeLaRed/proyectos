@@ -1,9 +1,9 @@
 {
   "name": "proyectos-partido-de-la-red",
   "version": "0.1.0",
-  "description": "Simple boilerplate for Reactjs with Redux and Firebase",
+  "description": "Sitio para mostrar los proyectos e iniciativas del Partido de la Red.",
   "main": "index.js",
-  "repository": "git@github.com:btomashvili/react-redux-firebase-boilerplate.git",
+  "repository": "git@github.com:PartidoDeLaRed/proyectos.git",
   "scripts": {
     "dev": "webpack-dev-server --config ./webpack/webpack-dev.config.js --watch --colors",
     "build": "rm -rf dist && webpack --config ./webpack/webpack-prod.config.js --colors",
@@ -11,15 +11,8 @@
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
-  "author": "Beka Tomashvili",
-  "license": "MIT",
-  "keywords": [
-    "ReactJS",
-    "Redux",
-    "Firebase",
-    "React hot loader",
-    "React Router"
-  ],
+  "author": "mjlescano",
+  "license": "GPL-3.0",
   "devDependencies": {
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
