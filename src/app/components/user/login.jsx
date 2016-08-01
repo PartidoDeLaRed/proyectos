@@ -28,7 +28,7 @@ class UserLogin extends Component {
     })
   }
   render () {
-    let message = [<br/>]
+    let message = []
 
     if (this.state.message) {
       message.push(

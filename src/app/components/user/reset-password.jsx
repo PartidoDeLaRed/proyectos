@@ -25,7 +25,7 @@ class ResetPassword extends Component {
   }
 
   render () {
-    let message = [<br/>]
+    let message = []
 
     if (this.state.message) {
       message.push(
@@ -40,7 +40,7 @@ class ResetPassword extends Component {
         <form role='form' onSubmit={this.onFormSubmit}>
           {message}
           <h3>Recuperar Contraseña</h3>
-          <p>Pasanos tu mail y te mandamos un link para que puedas cambiar tu contraseña.</p>
+          <p>Pasanos tu mail así te podemos eviar un link para cambiar tu contraseña.</p>
           <div className='form-group'>
             <input
               type='email'

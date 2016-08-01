@@ -87,7 +87,10 @@ class App extends Component {
 }
 
 App.propTypes = {
-  fetchUser: React.PropTypes.number
+  logoutUser: React.PropTypes.func,
+  fetchUser: React.PropTypes.func,
+  currentUser: React.PropTypes.object,
+  children: React.PropTypes.node
 }
 
 function mapDispatchToProps (dispatch) {

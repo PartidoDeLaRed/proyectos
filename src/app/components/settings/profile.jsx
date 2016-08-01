@@ -32,7 +32,7 @@ class UserProfile extends Component {
       return <Loading/>
     }
 
-    let message = [<br/>]
+    let message = []
 
     if (this.state.message) {
       message.push(
